@@ -34,7 +34,7 @@ func NewSiliconFlow(apiKey string) *SiliconFlow {
 }
 
 func (s *SiliconFlow) CreateImage(req *openai.ImageRequest) (*openai.ImageResponse, error) {
-	url := "https://api.siliconflow.cn/v1/black-forest-labs/" + req.Model + "/text-to-image"
+	url := "https://api.siliconflow.cn/v1/" + req.Model + "/text-to-image"
 	payload := SiliconFlowGenerateImageRequest{
 		Prompt:            req.Prompt,
 		ImageSize:         req.Size,
